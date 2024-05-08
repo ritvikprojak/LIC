@@ -1,0 +1,26 @@
+insert into VENDOR (VENDOR_ID, USER_ID, SUPERVISOR_ID)
+values ('1','sourabh','akshay');
+insert into VENDOR (VENDOR_ID, USER_ID, SUPERVISOR_ID)
+values ('1','ravleen','akshay');
+insert into VENDOR (VENDOR_ID, USER_ID, SUPERVISOR_ID)
+values ('1','minal','akshay');
+insert into VENDOR (VENDOR_ID, USER_ID, SUPERVISOR_ID)
+values ('1','akshay','');
+
+insert into VENDOR (VENDOR_ID, USER_ID, SUPERVISOR_ID)
+values ('2','vijay','Mohin');
+insert into VENDOR (VENDOR_ID, USER_ID, SUPERVISOR_ID)
+values ('2','shankar','Mohin');
+insert into VENDOR (VENDOR_ID, USER_ID, SUPERVISOR_ID)
+values ('2','rahul','Mohin');
+insert into VENDOR (VENDOR_ID, USER_ID, SUPERVISOR_ID)
+values ('2','Mohin','');
+
+
+--insert into VENDOR (id,USER_ID , SUPERVISOR_ID)
+--values (001,1001,'Sourabh Shinde');
+--insert into VENDOR (id,USER_ID , SUPERVISOR_ID)
+--values (002,1002,'Ravleen Kaur');
+--insert into VENDOR (id,USER_ID , SUPERVISOR_ID)
+--values (003,1003,'Minal Patil');
+

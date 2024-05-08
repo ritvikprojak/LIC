@@ -1,0 +1,19 @@
+[
+	{
+		"symbolicName" : "Office",
+		"initialValue" : "MUMBAI BO",
+		"choiceList" : {
+			"displayName" : "Offices",
+			"choices" : [
+				{
+					"displayName" : "MUMBAI BO",
+					"value" : "MUMBAI BO"
+				},
+				{
+					"displayName" : "PUNE BO",
+					"value" : "PUNE BO"
+				}
+			]
+		}
+	}
+]

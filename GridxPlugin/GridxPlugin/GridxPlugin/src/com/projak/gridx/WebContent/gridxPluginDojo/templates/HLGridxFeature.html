@@ -1,0 +1,92 @@
+<div class="ecmMyCenterPane">
+		<div data-dojo-type="idx/layout/BorderContainer" data-dojo-props="gutters:true">
+				<div data-dojo-attach-point="noResult" id="noResult" data-dojo-id="noResult" style="display: none; text-align: center;">
+						<h1>No Data Found</h1>
+				</div>
+				<div data-dojo-attach-point="modeTabContainer" data-dojo-type="dijit.layout.TabContainer" region="center" tabStrip="true">
+						<div data-dojo-attach-point="searchModeContainer" id="searchModeContainer" data-dojo-type="dijit/layout/ContentPane" title="Search" gutters="false" region="center">
+								<div data-dojo-type="idx/layout/BorderContainer" data-dojo-props="gutters:true">
+										<div data-dojo-attach-point="leadingPane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'leading'">
+												<div style="display: flex; -ms-flex-flow: column; flex-direction: column" data-dojo-type="dijit.form.Form" id="searchForm" data-dojo-id="searchForm" encType="multipart/form-data"
+														action="javascript:void(0)" method="GET">
+														<h1>Search By:</h1>
+														<div style="display: flex; margin-top: 2em">
+																<input data-dojo-attach-point="radioOne" type="radio" data-dojo-type="dijit/form/RadioButton" name="searchBy" id="radioOne" checked value="A" /> <label for="radioOne">Application
+																		Number</label>
+														</div>
+														<div style="display: flex; margin-top: 2em">
+																<input data-dojo-attach-point="radioTwo" type="radio" data-dojo-type="dijit/form/RadioButton" name="searchBy" id="radioTwo" value="L" /> <label for="radioTwo">Loan Number</label>
+														</div>
+														<div style="margin-top: 2em">
+																<input style="margin-left: 0rem; width: auto" data-dojo-attach-point="customerId" type="text" id="customerId" name="customerId" data-dojo-type="dijit.form.TextBox" />
+														</div>
+														<div style="margin-left: 3em; margin-top: 2em">
+																<input type="button" value="Search" label="Search" data-dojo-attach-point="searchButton" data-dojo-type="dijit.form.Button" id="searchButton" />
+														</div>
+
+												</div>
+										</div>
+										<div data-dojo-attach-point="centerPane" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'center'">
+
+												<div data-dojo-type="dijit/layout/ContentPane" data-dojo-props="region:'top'" class="gridx-toolbar">
+														<div class="gridx-toolbar" data-dojo-attach-point="topPane" data-dojo-type="dijit/layout/ContentPane" style="display : inline; "></div>
+														<div data-dojo-attach-point="topgrid" class = "topGrid">
+																<label style="padding-right: 15px; display: flex; font-size: 18px; background-color: #f7f7f7; font-weight: lighter;" data-dojo-attach-point="applicationNumberLabel">Application Number</label> <label
+																		style="padding-right: 15px; display: flex; font-size: 18px; font-weight: bolder;" data-dojo-attach-point="applicationNumber"> </label> <label
+																		style="padding-right: 15px; display: flex; font-size: 18px; background-color: #f7f7f7; font-weight: lighter;" data-dojo-attach-point="loanNumberLabel">Loan Number</label> <label
+																		style="padding-right: 15px; display: flex; font-size: 18px; font-weight: bolder;" data-dojo-attach-point="loanNumber"></label>
+														</div>
+												</div>
+												<div data-dojo-attach-point="gridContainer" id="gridContainer"></div>
+												<div data-dojo-attach-point="noResultGrid" id="noResultGrid" data-dojo-id="noResultGrid" style="display: none; text-align: center;">
+														<h1>No Data Found</h1>
+												</div>
+
+												<div dojoType="dijit.Menu" id="headerMenu" style="display: none;">
+														<div dojoType="dijit.MenuItem" onclick='showInfo()'>Menu Context Info</div>
+														<div data-dojo-type="dijit.MenuItem"
+																data-dojo-props='iconClass:"dijitEditorIcon dijitEditorIconCopy", 
+			onClick:function(){ console.log("not actually copying anything, just a test!");}, accelKey:"Ctrl+C"'>Copy</div>
+														<div data-dojo-type="dijit.MenuItem"
+																data-dojo-props='iconClass:"dijitEditorIcon dijitEditorIconPaste",
+			onClick:function(){ console.log("not actually pasting anything, just a test!") }'>Paste</div>
+														<div data-dojo-type="dijit.MenuSeparator"></div>
+														<div dojoType="dijit.MenuItem" data-dojo-props='onClick:function(){ console.log("header menu item"); }'>Header Menu Item</div>
+														<div data-dojo-type="dijit.MenuItem" data-dojo-props='disabled:true, onClick:function(){ alert("this should NOT appear"); }'>Disabled Header Menu Item</div>
+														<div data-dojo-type="dijit.PopupMenuItem">
+																<span>Header Menu Submenu</span>
+																<div data-dojo-type="dijit.Menu">
+																		<div data-dojo-type="dijit.MenuItem" data-dojo-props='onClick:function(){ console.log("Submenu 1!") }'>Submenu Item One</div>
+																		<div data-dojo-type="dijit.MenuItem" data-dojo-props='onClick:function(){ console.log("Submenu 2!") }'>Submenu Item Two</div>
+																		<div data-dojo-type="dijit.PopupMenuItem">
+																				<span>Deeper Submenu</span>
+																				<div data-dojo-type="dijit.Menu">
+																						<div data-dojo-type="dijit.MenuItem" data-dojo-props='onClick:function(){ console.log("Sub-submenu 1!") }'>Sub-sub-menu Item One</div>
+																						<div data-dojo-type="dijit.MenuItem" data-dojo-props='onClick:function(){ console.log("Sub-submenu 2!") }'>Sub-sub-menu Item Two</div>
+																				</div>
+																		</div>
+																</div>
+														</div>
+														<div data-dojo-type="dijit.MenuSeparator"></div>
+														<div data-dojo-type="dijit.CheckedMenuItem" data-dojo-props='checked:true, onChange:function(val){ console.log("Now set to " + val); }'>Checked</div>
+														<div data-dojo-type="dijit.CheckedMenuItem">Not Checked</div>
+														<div data-dojo-type="dijit.CheckedMenuItem" data-dojo-props='checked:true, disabled:true'>Checked Disabled</div>
+												</div>
+										</div>
+								</div>
+						</div>
+						<div data-dojo-attach-point="browseModeContainer" data-dojo-type="dijit.layout.BorderContainer" gutters="false" region="center" title="Documents">
+								<div data-dojo-attach-point="noResultContent" id="noResultContent" data-dojo-id="noResultContent" style="display: none; text-align: center;">
+										<h1>No Data Found</h1>
+								</div>
+								<div data-dojo-attach-point="resultsArea" data-dojo-type="dijit/layout/ContentPane" data-dojo-props="splitter:true, region:'leading'" style="width: 50%">
+										<div data-dojo-attach-point="contentSearchResults" id="contentSearchResults" data-dojo-type="ecm/widget/listView/ContentList" data-dojo-props="emptyMessage:'${messages.folder_is_empty}'"
+												style="width: 50%"></div>
+								</div>
+								<div data-dojo-type="dijit.layout.ContentPane" data-dojo-props="splitter:true, region:'center'" id="viewerCP" data-dojo-attach-point="viewerCP">
+										<div data-dojo-attach-point="contentViewer" id="contentViewer"></div>
+								</div>
+						</div>
+				</div>
+		</div>
+</div>

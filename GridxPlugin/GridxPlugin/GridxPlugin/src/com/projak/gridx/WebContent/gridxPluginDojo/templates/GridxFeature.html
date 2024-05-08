@@ -1,0 +1,70 @@
+<div class="ecmCenterPane">
+	<div data-dojo-type="idx/layout/BorderContainer"
+		data-dojo-props="gutters:true">
+		<div data-dojo-attach-point="topPane"
+			data-dojo-type="dijit/layout/ContentPane"
+			data-dojo-props="splitter:true,region:'top'">
+			<H2>Gridx</H2>
+				<div data-dojo-type="dijit.form.Form" id="searchForm" data-dojo-id="searchForm" encType="multipart/form-data" action="javascript:void(0)" method="GET">
+                	<h1>Search By:</h1><br/>
+                	<input data-dojo-attach-point="radioOne" type="radio" data-dojo-type="dijit/form/RadioButton" name="searchBy" id="radioOne" checked value="app_no"/> 
+                		<label for="radioOne">Application Number</label> &nbsp; &nbsp; &nbsp; &nbsp;
+    				<input data-dojo-attach-point="radioTwo" type="radio" data-dojo-type="dijit/form/RadioButton" name="searchBy" id="radioTwo" value="loan_no"/> 
+    					<label for="radioTwo">Loan Number</label> &nbsp; &nbsp; &nbsp; &nbsp; 
+    				<input data-dojo-attach-point="customerId" type="text" id="customerId" name="customerId" data-dojo-type="dijit.form.TextBox"/>&nbsp; &nbsp; &nbsp; &nbsp;
+    					<input type="button" value="Search" label="Search"  data-dojo-attach-point="searchButton" data-dojo-type="dijit.form.Button"  id="searchButton" />
+	    		</div>
+		</div>
+		<div data-dojo-attach-point="centerPane"
+			data-dojo-type="dijit/layout/ContentPane"
+			data-dojo-props="region:'center'">
+			<div data-dojo-attach-point="gridContainer" id="gridContainer"></div>
+			<div dojoType="dijit.Menu" id="headerMenu" style="display: none;">
+				<div dojoType="dijit.MenuItem" onclick='showInfo()'>Menu
+					Context Info</div>
+				<div data-dojo-type="dijit.MenuItem"
+					data-dojo-props='iconClass:"dijitEditorIcon dijitEditorIconCopy", 
+			onClick:function(){ console.log("not actually copying anything, just a test!");}, accelKey:"Ctrl+C"'>Copy</div>
+				<div data-dojo-type="dijit.MenuItem"
+					data-dojo-props='iconClass:"dijitEditorIcon dijitEditorIconPaste",
+			onClick:function(){ console.log("not actually pasting anything, just a test!") }'>Paste</div>
+				<div data-dojo-type="dijit.MenuSeparator"></div>
+				<div dojoType="dijit.MenuItem"
+					data-dojo-props='onClick:function(){ console.log("header menu item"); }'>Header
+					Menu Item</div>
+				<div data-dojo-type="dijit.MenuItem"
+					data-dojo-props='disabled:true, onClick:function(){ alert("this should NOT appear"); }'>Disabled
+					Header Menu Item</div>
+				<div data-dojo-type="dijit.PopupMenuItem">
+					<span>Header Menu Submenu</span>
+					<div data-dojo-type="dijit.Menu">
+						<div data-dojo-type="dijit.MenuItem"
+							data-dojo-props='onClick:function(){ console.log("Submenu 1!") }'>Submenu
+							Item One</div>
+						<div data-dojo-type="dijit.MenuItem"
+							data-dojo-props='onClick:function(){ console.log("Submenu 2!") }'>Submenu
+							Item Two</div>
+						<div data-dojo-type="dijit.PopupMenuItem">
+							<span>Deeper Submenu</span>
+							<div data-dojo-type="dijit.Menu">
+								<div data-dojo-type="dijit.MenuItem"
+									data-dojo-props='onClick:function(){ console.log("Sub-submenu 1!") }'>Sub-sub-menu
+									Item One</div>
+								<div data-dojo-type="dijit.MenuItem"
+									data-dojo-props='onClick:function(){ console.log("Sub-submenu 2!") }'>Sub-sub-menu
+									Item Two</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div data-dojo-type="dijit.MenuSeparator"></div>
+				<div data-dojo-type="dijit.CheckedMenuItem"
+					data-dojo-props='checked:true, onChange:function(val){ console.log("Now set to " + val); }'>Checked</div>
+				<div data-dojo-type="dijit.CheckedMenuItem">Not Checked</div>
+				<div data-dojo-type="dijit.CheckedMenuItem"
+					data-dojo-props='checked:true, disabled:true'>Checked
+					Disabled</div>
+			</div>
+		</div>
+	</div>
+</div>

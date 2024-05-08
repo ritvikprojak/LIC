@@ -1,0 +1,72 @@
+<div>
+    <table class="propertyTable" role="presentation">
+        <tr>
+            <td class="propertyRowLabel">
+			  <span class="required">*</span>
+        	  <label for="dropdown">List of Dropdown:</label>&nbsp;
+        	  <div data-dojo-type="ecm.widget.HoverHelp" 
+                   data-dojo-attach-point="homeloanFeatureHH" 
+                   message="Comma separated list of Case Solutions">
+        	  </div>
+            </td>
+            <td class="propertyRowValue">
+        	  <div id="dropdown" data-dojo-attach-point="dropdown" 
+                               data-dojo-type="ecm.widget.ValidationTextBox"
+                               data-dojo-attach-event="onKeyUp: _onParamChange"
+                               required="true" trim="true" propercase="false">
+        	  </div>
+      		</td>
+        </tr>
+        <tr>
+            <td class="propertyRowLabel">
+			  <span class="required">*</span>
+        	  <label for="api">API URL</label>&nbsp;
+        	  <div data-dojo-type="ecm.widget.HoverHelp" 
+                   data-dojo-attach-point="homeloanFeatureAPI" 
+                   message="Base URL for API">
+        	  </div>
+            </td>
+            <td class="propertyRowValue">
+        	  <div id="api" data-dojo-attach-point="api" 
+                               data-dojo-type="ecm.widget.ValidationTextBox"
+                               data-dojo-attach-event="onKeyUp: _onParamChange"
+                               required="true" trim="true" propercase="false">
+        	  </div>
+      		</td>
+        </tr>
+<!--         <tr> -->
+<!--             <td class="propertyRowLabel"> -->
+<!-- 			  <span class="required">*</span> -->
+<!--         	  <label for="searchTemplate">Name of Search Template:</label>&nbsp; -->
+<!--         	  <div data-dojo-type="ecm.widget.HoverHelp"  -->
+<!--                    data-dojo-attach-point="homeloanFeatureST"  -->
+<!--                    message="Name of ICN Search Template"> -->
+<!--         	  </div> -->
+<!--             </td> -->
+<!--             <td class="propertyRowValue"> -->
+<!--         	  <div id="searchTemplate" data-dojo-attach-point="searchTemplate"  -->
+<!--                                data-dojo-type="ecm.widget.ValidationTextBox" -->
+<!--                                data-dojo-attach-event="onKeyUp: _onParamChange" -->
+<!--                                required="true" trim="true" propercase="false"> -->
+<!--         	  </div> -->
+<!--       		</td> -->
+<!--         </tr> -->
+<!--         <tr> -->
+<!--             <td class="propertyRowLabel"> -->
+<!-- 			  <span class="required">*</span> -->
+<!--         	  <label for="cmodFolder">Name of CMOD Folder to Search:</label>&nbsp; -->
+<!--         	  <div data-dojo-type="ecm.widget.HoverHelp"  -->
+<!--                    data-dojo-attach-point="homeloanFeatureST"  -->
+<!--                    message="Comma separated list of CMOD Folders to Search"> -->
+<!--         	  </div> -->
+<!--             </td> -->
+<!--             <td class="propertyRowValue"> -->
+<!--         	  <div id="cmodFolder" data-dojo-attach-point="cmodFolder"  -->
+<!--                                data-dojo-type="ecm.widget.ValidationTextBox" -->
+<!--                                data-dojo-attach-event="onKeyUp: _onParamChange" -->
+<!--                                required="true" trim="true" propercase="false"> -->
+<!--         	  </div> -->
+<!--       		</td> -->
+<!--         </tr> -->
+    </table>
+</div>

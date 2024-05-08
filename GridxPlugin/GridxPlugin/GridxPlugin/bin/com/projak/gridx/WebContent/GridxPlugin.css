@@ -1,0 +1,18 @@
+/* .gridx{
+	height : 400px;
+} */
+/* 
+.oneui .dijitTextBox .gridxTextBox{
+    width: 22em;
+    margin-left: 2em;
+} */
+.gridx-toolbar {
+  padding: 5px; height: auto !important; width: auto !important;
+}
+
+.topGrid {
+  -ms-flex-flow: row; flex-direction: row; margin: auto; display: none;
+  height: auto !important; float: right; inline-size: fit-content;
+  padding: 5px; padding-right: 30px; padding-top: 12px;
+  padding-bottom: 10px;
+}
